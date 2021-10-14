@@ -61,28 +61,31 @@ while True:
 
 ## C
 
+Compile this by doing `gcc main.c -lm`
+
 ```c
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 #include<math.h>
 
-int isOdd(num)                                                        {
+int isOdd(num)
+{
         return num % 2;
 }
 
 int main()
 {
-        srand(time(NULL));
         int integer;
-        int startNum;
-        startNum = 214748364;                                                 integer = floor(random() * startNum);
+  int startNum;
+        startNum = 295147;
+        integer = floor(random() * startNum);
 
         int newInt = integer % 2;
-
         int i = 0;
         while (i == 0)
         {
+                newInt = integer % 2;
                 if(newInt == 0) {
                         integer = integer / 2;
                 }
@@ -98,6 +101,7 @@ int main()
 
                 printf("%d\n", integer);
         }
+
 
         return 0;
 }
